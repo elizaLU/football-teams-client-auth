@@ -9,7 +9,7 @@ function TeamDetails(props) {
       <ul>
         {props.team.players.map(player => {
           return (
-            <li key={player.id}>>
+            <li key={player.id}>
               {player.number} : {player.name}
             </li>
           );

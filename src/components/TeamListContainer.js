@@ -2,7 +2,7 @@ import React from "react";
 import { loadTeams } from "../actions/teams";
 import { connect } from "react-redux";
 import TeamsList from "./TeamsList";
-import CreateTeamFormContainer from "./CreatTeamFormContainer";
+import CreateTeamFormContainer from "./CreateTeamFormContainer";
 import { Link } from "react-router-dom";
 
 class TeamsListContainer extends React.Component {
@@ -18,8 +18,8 @@ class TeamsListContainer extends React.Component {
         {this.props.loggedIn ? (
           <CreateTeamFormContainer />
         ) : (
-          <Link to="/login">Please log in to create teams</Link>
-        )}
+            <Link to="/login">Please log in to create teams</Link>
+          )}
       </div>
     );
   }

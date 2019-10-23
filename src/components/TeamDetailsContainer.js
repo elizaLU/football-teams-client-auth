@@ -11,7 +11,6 @@ class TeamDetailsContainer extends React.Component {
   }
 
   onDelete = () => {
-    console.log("let's check props ", this.props.loggedIn)
     this.props.deleteTeam(this.props.team)
     this.props.history.push('/teams');
   }
