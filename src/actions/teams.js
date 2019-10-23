@@ -67,3 +67,33 @@ export const loadTeam = id => (dispatch, getState) => {
     dispatch(fetchTeamSuccess(response.body));
   });
 };
+
+//delete:
+export const DELETE_TEAM_SUCCESS = 'DELETE_TEAM_SUCCESS'
+
+const deleteTeamSuccess = id => ({
+  type: DELETE_TEAM_SUCCESS,
+  payload: id
+})
+
+export const deleteTeam = (team) => (dispatch, getState) => {
+  request
+    .delete(`${baseUrl}/teams/${team.id}`)
+    .then(dispatch(deleteTeamSuccess(team.id)))
+    .catch(console.error)
+}
+
+//*** not finished patch to edit a team:
+export const UPDATE_TEAM_SUCCESS = 'UPDATE_TEAM_SUCCESS'
+
+const updateTeamSuccess = id => ({
+  type: UPDATE_TEAM_SUCCESS,
+  payload: id //team?
+})
+
+export const updateTeam = (team, data) => (dispatch, getState) => {
+  request
+    .patch(`${baseUrl}/teams/${team.id}`) //?
+    .then(dispatch(updateTeamSuccess(data)))
+    .catch(console.error)
+}

@@ -1,4 +1,4 @@
-import { TEAMS_FETCHED, TEAM_CREATE_SUCCESS } from "../actions/teams";
+import { TEAMS_FETCHED, TEAM_CREATE_SUCCESS, DELETE_TEAM_SUCCESS } from "../actions/teams";
 
 export default (state = [], action = {}) => {
   // console.log("STATE", state, "ACTION", action);
@@ -10,8 +10,9 @@ export default (state = [], action = {}) => {
     case TEAM_CREATE_SUCCESS:
       return [...state, { ...action.payload }];
 
-    // case 'DELETE_TEAM'
-    //   return state.filter() // filter out the team that you deleted
+    // filter out the team that you deleted:
+    case DELETE_TEAM_SUCCESS:
+            return state.filter((team) => team.id !== action.payload)
 
     default:
       return state;

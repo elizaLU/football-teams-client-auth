@@ -15,6 +15,7 @@ function TeamDetails(props) {
           );
         })}
       </ul>
+      <button onClick={props.onDelete}>DELETE</button>
     </div>
   );
 }
