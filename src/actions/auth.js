@@ -5,6 +5,7 @@ const baseUrl = "http://localhost:4000";
 
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 
+//THIS IS THUNK!
 export const login = (email, password) => (dispatch, getState) => {
   console.log(email, password);
   request
