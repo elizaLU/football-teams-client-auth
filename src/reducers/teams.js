@@ -8,11 +8,11 @@ export default (state = [], action = {}) => {
       return [...state, ...action.payload];
 
     case TEAM_CREATE_SUCCESS:
-      return [...state, { ...action.payload }];
+      return [...state, { ...action.payload }]; //here we want the teams form the state + new team
 
     // filter out the team that you deleted:
     case DELETE_TEAM_SUCCESS:
-            return state.filter((team) => team.id !== action.payload)
+      return state.filter((team) => team.id !== action.payload)
 
     default:
       return state;
