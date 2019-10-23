@@ -9,7 +9,7 @@ const playerCreateSuccess = player => ({
   payload: player
 });
 
-export const createplayer = data => (dispatch, getState) => {
+export const createPlayer = data => (dispatch, getState) => {
   const token = getState().auth;
 
   request

@@ -9,13 +9,13 @@ function TeamDetails(props) {
       <ul>
         {props.team.players.map(player => {
           return (
-            <li>
+            <li key={player.id}>>
               {player.number} : {player.name}
             </li>
           );
         })}
       </ul>
-      <button onClick={props.onDelete}>DELETE</button>
+      <button onClick={props.onDelete}>DELETE TEAM</button>
     </div>
   );
 }
