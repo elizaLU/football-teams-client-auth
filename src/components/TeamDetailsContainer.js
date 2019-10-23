@@ -27,8 +27,6 @@ class TeamDetailsContainer extends React.Component {
         ) : (
             <Link to="/login">Please log in to add players to this team.</Link>
           )}
-
-
       </div>
     );
   }
